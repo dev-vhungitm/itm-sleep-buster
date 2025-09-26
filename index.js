@@ -6,7 +6,7 @@ dotenv.config();
 const app = express();
 const targetURLs = (process.env.TARGET_URLS || '').split(',');
 
-app.get('/ping', async (_, res) => {
+app.get('/api/ping', async (_, res) => {
 	res.send(`Haha ping successfully`);
 	console.log(targetURLs);
 
