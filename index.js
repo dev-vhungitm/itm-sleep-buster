@@ -18,7 +18,7 @@ app.get('/api/ping', async (_, res) => {
 			} catch (err) {
 				console.error(`${new Date().toISOString()}: Failed to ping ${url}: ${err.message}`);
 			}
-		}, 5 * 1000);
+		}, 12 * 60 * 1000);
 	});
 });
 
