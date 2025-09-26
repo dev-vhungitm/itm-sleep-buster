@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 8000;
 const targetURLs = (process.env.TARGET_URLS || '').split(',');
 
 app.get('/ping', async (_, res) => {
@@ -23,6 +22,4 @@ app.get('/ping', async (_, res) => {
 	});
 });
 
-app.listen(PORT, () => {
-	console.log(`Running on port ${PORT}`);
-});
+export default app;
